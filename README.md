@@ -1,3 +1,41 @@
+# REQ112703
+
+This section contains information about the enhanced CI / CD process created for this assignment using GitHub Actions.
+
+## Instructions and information for Question 1
+To run the repos locally, run `docker compose up` command from root directory.  The Dockerfile includes both starting the environment and running the unit tests.  The more detail explanation about the entire stack process being started are included from the original readme definition in the `Sample API` section below.
+
+The technical file changes are included in 
+[Changelog for Question1](changelog_question1.md)
+
+## Instructions and information for Question 2
+The CI / CD process is automatically triggered when there is code update or checkin to the master branch of the repository.  The workflow process and status can be found from the following link:
+
+[GitHub Actions Workflow](https://github.com/ldominic-hy/req112703/actions)
+
+The workflow build a package ready for deployment and uploaded into GitHub container registry (ghcr.io).  Please refer to the following link on created packages:
+
+[Docker package images](https://github.com/ldominic-hy/req112703/pkgs/container/req112703)
+
+To download the packages in docker, please run the command similar to the following:
+
+`docker pull ghcr.io/ldominic-hy/req112703:sha256-808b033a9054e28bcab1d37a1d0c2f09d4d8220c8132dd0dd9d6f4f3bf307c43.sig`
+
+Note that the version would be different after each build.  You should always refer to the `Docker package images` link above for the latest built version.
+
+The technical file changes are included in 
+[Changelog for Question2](changelog_question2.md)
+
+
+## Instructions and information for Question 3
+
+Answer to Question 3 has been included as a pdf format in this repos root directory with the link below:
+
+[REQ112703-Question3.pdf](REQ112703-Question3.pdf)
+
+
+Any other unchanged information can be referred to the original readme of the `Sample API` below.
+
 # Sample API
 
 This is a sample api. 
