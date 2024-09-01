@@ -16,5 +16,5 @@ COPY pyproject.toml ./pyproject.toml
 # Install dependencies using Poetry
 RUN poetry install
 
-# Run the script
-CMD ["poetry", "run", "fastapi", "dev", "--host", "0.0.0.0", "--port", "3000", "src/sample_api/main.py"]
+# Run tests with pytest and start up
+CMD poetry run pytest ./tests -x -o log_cli=true --disable-warnings -vvv && poetry run fastapi dev --host 0.0.0.0 --port 3000 src/sample_api/main.py
